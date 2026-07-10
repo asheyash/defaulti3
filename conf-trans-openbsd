@@ -36,7 +36,7 @@ client.unfocused #444444 #444444 #444444 #888888
 
 #terminal configirations
 #start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec xterm
 
 #reload i3 config file
 bindsym $mod+Shift+r restart
@@ -51,6 +51,9 @@ bindsym $mod+a exec --no-startup-id dmenu_run
 exec_always --no-startup-id killall picom; sleep 1 && /usr/bin/picom -b
 
 #status bar i3-status
-exec --no-startup-id i3status
+bar {
+    status_command i3status
+    position top
+}
 
 
