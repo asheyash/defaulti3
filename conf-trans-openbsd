@@ -23,6 +23,9 @@ bindsym $mod+Shift+Right move right
 #full screen focused window toggle
 bindsym $mod+f fullscreen toggle
 
+#toggle floating 
+bindsym $mod+space floating toggle
+
 #binds to minimise apps
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -46,3 +49,8 @@ bindsym $mod+a exec --no-startup-id dmenu_run
 
 #run picom for transparancy
 exec_always --no-startup-id killall picom; sleep 1 && /usr/bin/picom -b
+
+#status bar i3-status
+exec --no-startup-id i3status
+
+
