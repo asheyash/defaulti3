@@ -1,0 +1,47 @@
+#define mod key
+set $mod Mod4
+
+#window config
+new_window pixel 1
+font pango:monospace 8
+
+#kill a window 
+bindsym $mod+Shift+q kill
+
+#window focus changes
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+#window move from focus 
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#full screen focused window toggle
+bindsym $mod+f fullscreen toggle
+
+#binds to minimise apps
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+#tile border colors
+client.focused #FFFFFF #FFFFFF #000000 #FFFFFF 
+client.unfocused #444444 #444444 #444444 #888888
+
+#terminal configirations
+#start a terminal
+bindsym $mod+Return exec $term
+
+#reload i3 config file
+bindsym $mod+Shift+r restart
+
+#binds for app libary 
+bindsym $mod+a exec --no-startup-id rofi -show drun
+
+#select wallpaper from local files
+#exec --no-startup-id feh --bg-fill add-filepath
+
+#run picom for transparancy
+exec_always --no-startup-id killall picom; sleep 1 && /usr/bin/picom -b
