@@ -1,0 +1,23 @@
+general {
+    colors = true
+    interval = 5
+}
+
+order += "wireless _first_"
+order += "volume master"
+order += "battery 0"
+
+
+wireless _first_ {
+    format_up = "wifi %essid %quality"
+    format_down = "wifi down"
+}
+
+volume master {
+    format = "vol %volume"
+}
+
+battery 0 {
+    format = "bat %status %percentage"
+}
+
