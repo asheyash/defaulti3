@@ -13,6 +13,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 #window move from focus 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -38,7 +39,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+r restart
 
 #binds for app libary 
-bindsym $mod+a exec --no-startup-id rofi -show drun
+bindsym $mod+a exec --no-startup-id dmenu_run
 
 #select wallpaper from local files
 #exec --no-startup-id feh --bg-fill add-filepath
